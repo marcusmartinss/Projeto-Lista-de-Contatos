@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.site-header {
+    color: #EEE6CE;
+    background: #CD3F3E;
+    padding-top: 1.8rem;
+    padding-bottom: 2.7rem;
+}
+
+.title, .exit {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 50%;
+}
+
+.title {
+    padding-left: 10%;
+    float: left;
+}
+
+.exit {
+    padding-right: 10%;
+    float: right;
+}
