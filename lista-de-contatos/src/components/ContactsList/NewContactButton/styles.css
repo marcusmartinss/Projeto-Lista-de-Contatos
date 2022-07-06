@@ -9,6 +9,8 @@
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto; 
+    
+    justify-content: left;
 }
 
 .new-contact-container:hover {
