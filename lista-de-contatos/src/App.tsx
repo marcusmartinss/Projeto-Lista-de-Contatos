@@ -8,6 +8,16 @@ function App() {
       <header>
         <Header/>
       </header>
+      <body>
+        <div className="container">
+          <div className="contacts-title">
+            Seus contatos
+          </div>
+          <div className="contats-subtitle">
+            Todos os seus contatos estão listados abaixo.
+          </div>
+        </div>
+      </body>
     </Fragment>
   );
 }
