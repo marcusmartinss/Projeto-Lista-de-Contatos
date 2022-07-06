@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registerTitle {
+
+}
+
+.registerSubtitle {
+
+}
+
+.inputTitle {
+
+}
+
+.inputBox {
+
+}
+
+.cancelButton {
+
+}
+
+.addButton {
+    
+}
