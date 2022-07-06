@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Header } from './components/Header';
 import './App.css';
 
-import { Contacts } from './components/Contacts';
+import { Contacts } from './components/ContactsList';
 
 function App() {  
   return (
