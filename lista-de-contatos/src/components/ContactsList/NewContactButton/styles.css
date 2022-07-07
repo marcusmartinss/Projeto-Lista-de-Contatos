@@ -2,7 +2,6 @@
     height: 3rem;
     width: 50rem;
     background: #DC3F3E;
-    hover: #FFFFFF;
     border-radius: 0.5rem;  
     border: none;
 
@@ -11,6 +10,8 @@
     margin-right: auto; 
     
     justify-content: left;
+
+    cursor: pointer;
 }
 
 .new-contact-container:hover {
