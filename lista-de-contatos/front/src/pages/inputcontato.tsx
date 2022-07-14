@@ -4,7 +4,7 @@ import NewContact from "../components/ContactInfo/NewContact";
 
 export default function InputContato(){
     
-    const [isEditing, setIsEditing] = useState<boolean>(true);
+    const [isEditing, setIsEditing] = useState<boolean>(false);
     
     return(
         <>

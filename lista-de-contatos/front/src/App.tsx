@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
+
 import { Header } from './components/Header';
 import './App.css';
-import InputContato from './pages/inputcontato';
 
+import InputContato from './pages/inputcontato';
 import { Contacts } from './components/ContactsList';
 
-function App() {  
+const App = () => {
 
-  let tela: string = '1';
+  let tela: string = '';
 
   return (
     <Fragment>
