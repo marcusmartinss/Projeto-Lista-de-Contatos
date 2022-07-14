@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+.container {
+    width: 100%;
+}
+
+.contacts-title {
+    font-size: 4em;
+    font-weight: 700;
+    color: #313552;
+
+    margin-top: 4.5rem;
+}
+
+.contats-subtitle {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: rgba(49, 53, 82, 0.4);
+
+    margin-top: 0.25rem;
+}
+
+.contacts-title, .contats-subtitle, .new-contact-container {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+
+    display: flex;
+    align-items: center;
+}
+
+.contacts-title, .contats-subtitle {
+    justify-content: center;
+}
