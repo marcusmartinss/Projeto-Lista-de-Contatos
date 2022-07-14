@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.contacts-table {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    
+    margin: 3rem auto 0 auto;
+}
+
+.column {
+    padding: 0 2.2rem 1rem 2.2rem;
+    text-align: left;
+    
+    max-width: 13rem;
+    word-wrap: break-word;
+}
+
+.edit-icon {
+    color: #4B7CC5;
+}
+
+.delete-icon {
+    color: #CD3F3E;
+}
+
+.edit-icon, .delete-icon {
+    cursor: pointer;
+    padding-left: 0.5rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+td {
+    font-size: 1rem;
+}
