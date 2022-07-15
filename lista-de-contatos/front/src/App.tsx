@@ -3,22 +3,32 @@ import React, { Fragment } from 'react';
 import { Header } from './components/Header';
 import './App.css';
 
-import InputContato from './pages/inputcontato';
-import { Contacts } from './components/ContactsList';
+import NewContact from './pages/NewContact';
+import EditContact from './pages/EditContact';
 
-const App = () => {
+import ContactsList from './pages/ContactsList';
 
-  let tela: string = '';
+export function App() {
+  
+  function changeTela() {
+    let tela: string = '0';
 
-  return (
-    <Fragment>
-      <header>
-        <Header/>
-      </header>
-      <body>
-        { tela === '1' ? <Contacts/> : <InputContato/> }
-      </body>
-    </Fragment>
+    switch (tela) {
+      case '0':
+        return <NewContact/>;
+      case '1':
+        return <EditContact/>
+      case '2':
+        return <ContactsList/>
+    }
+  }
+    
+
+  return(
+      <Fragment>
+        <Header />
+        {changeTela()}
+      </Fragment>
   );
 }
 

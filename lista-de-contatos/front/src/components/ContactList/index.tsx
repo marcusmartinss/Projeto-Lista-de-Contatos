@@ -4,7 +4,7 @@ import { NewContactButton } from "./NewContactButton";
 
 import './styles.css';
 
-export function Contacts () {
+export default function contactsList () {
 
     return (
         <Fragment>

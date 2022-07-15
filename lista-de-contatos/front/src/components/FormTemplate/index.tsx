@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import data from "./data.json"
+
 import "./styles.css";
 
-export default function EditContact(){
+export default function FormsTemplate(props: any) {
 
-    const [name, setName] = useState<string>(data.name);
-    const [surname, setSurname] = useState<string>(data.surname);
-    const [email, setEmail] = useState<string>(data.email);
-    const [number, setNumber] = useState<string>(data.number);
+    const [name, setName] = useState<string | null>();
+    const [surname, setSurname] = useState<string | null>();
+    const [email, setEmail] = useState<string | null>();
+    const [number, setNumber] = useState<string | null>();
 
-    function EditarContato(){
+    function ContactInput(){
         let obj = {
             "name": name,
             "surname": surname,
@@ -19,16 +19,15 @@ export default function EditContact(){
         console.log(obj)
     }
 
-
     return (
         <div className="container">
 
             <div className="registerTitle">
-                Editar informações do contato,
+                {props.registerTitle}
             </div>
 
             <div className="registerSubtitle">
-                Edite os dados abaixo.
+                {props.registerSubtitle}
             </div>
             
             <div className="inputContainer">
@@ -38,7 +37,7 @@ export default function EditContact(){
                     <input
                         className="inputBox"
                         type="text"
-                        defaultValue={name}
+                        defaultValue={props.nome}
                         onChange={event => setName(event.target.value)}
                     />
 
@@ -46,7 +45,7 @@ export default function EditContact(){
                     <input
                         className="inputBox" 
                         type="text"
-                        defaultValue={email}
+                        defaultValue={props.email}
                         onChange={event => setEmail(event.target.value)}
                     />
 
@@ -63,7 +62,7 @@ export default function EditContact(){
                     <input
                         className="inputBox"
                         type="text"
-                        defaultValue={surname}
+                        defaultValue={props.sobrenome}
                         onChange={event => setSurname(event.target.value)}
                     />
 
@@ -71,15 +70,15 @@ export default function EditContact(){
                     <input
                         className="inputBox"
                         type="tel"
-                        defaultValue={number}
+                        defaultValue={props.telefone}
                         onChange={event => setNumber(event.target.value)}
                     />
 
                     <button 
                         className="addButton"
-                        onClick={() => EditarContato()}
+                        onClick={() => ContactInput()}
                     >
-                        Atualizar
+                        Adicionar
                     </button>
                 </div>
 
