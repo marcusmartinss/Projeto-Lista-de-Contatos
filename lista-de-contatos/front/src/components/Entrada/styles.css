@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@300;400;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700&family=DM+Sans:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Inter';
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-image{
+    width: 15vw;
+    height: 50vh;
+    align-items: center;
+    margin: 0px;
+}
+
+.left > h1{
+    text-align: center;
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    color: #CD3F3E;
+    margin: 0px;
+}
+
+.left > h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: #313552;
+    margin: 0px;
+}
+
+.right{
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: column;
+    padding: 40px;
+    background: #CD3F3E;
+}
+
+.card > h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    padding: 100px 0px 0px 0px;
+    color: #FFFFFF;
+    margin: 10px;
+}
+
+.card > h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    color: #FFFFFF;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.card > h4{
+    margin: 10px 0px 0px 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.card > a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-decoration: none;
+    color: #313552;
+    margin: 2px 0px 0px 10px;
+}
+
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textfield > input{
+    width: 400px;
+    height: 40px;
+    margin: 10px;
+    
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 0px 0px 0px 15px;
+}
+
+.btn{
+    width: 415px;
+    height: 40px;
+    border: none;
+    margin: 10px;
+    padding: 0px 0px 0px 15px;
+
+
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #2b3055;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active{
+    background: #171a36;
+}
