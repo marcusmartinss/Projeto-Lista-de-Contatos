@@ -4,7 +4,7 @@ import {FaRegTrashAlt} from 'react-icons/fa/index.js';
 
 import './styles.css';
 
-import Data from './test.json';
+import Data from '../../../services/ContactList/test.json';
 
 function AppendNewContacts() {
     if (Data !== null) {

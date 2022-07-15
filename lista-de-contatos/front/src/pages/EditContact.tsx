@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import data from '../services/data.json';
+import data from '../services/FormTemplate/data.json';
 import FormsTemplate from "../components/FormTemplate";
 
 export default function EditContact(){
