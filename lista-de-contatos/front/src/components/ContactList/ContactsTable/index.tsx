@@ -5,8 +5,11 @@ import {FaRegTrashAlt} from 'react-icons/fa/index.js';
 import './styles.css';
 
 import Data from '../../../services/ContactList/test.json';
+import { Link } from 'react-router-dom';
+
 
 function AppendNewContacts() {
+
     if (Data !== null) {
         const newLines = Data.map(element => {
             return(
@@ -17,7 +20,12 @@ function AppendNewContacts() {
                     <td className="column">{element.Email}</td>
                     <td className="column">
                         <div className="icons">
-                            <FiEdit className="edit-icon"/>
+                            <FiEdit
+                                className="edit-icon"
+                                onClick={() => {
+                                    <Link to='/contacts'/>
+                                }}
+                            />
                             <FaRegTrashAlt className="delete-icon"/>
                         </div>
                     </td>
@@ -52,4 +60,8 @@ export function ContactsTable() {
             {TableConstruction()}
         </Fragment>
     );
+}
+
+function useHistory(): History {
+    throw new Error('Function not implemented.');
 }

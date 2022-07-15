@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 
-import ContactsList from "../components/ContactList";
+import ContactList from "../components/ContactList";
 
-export default function ContactsListPage() {
+export default function ContactsList() {
     return (
         <Fragment>
             <ContactsList/>
