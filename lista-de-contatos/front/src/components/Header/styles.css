@@ -25,6 +25,8 @@ body {
     float: left;
 }
 
+a { color: inherit }
+
 .exit {
     padding-right: 10%;
     float: right;

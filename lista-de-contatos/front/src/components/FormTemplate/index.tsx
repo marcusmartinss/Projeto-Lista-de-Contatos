@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -49,12 +50,13 @@ export default function FormsTemplate(props: any) {
                         onChange={event => setEmail(event.target.value)}
                     />
 
-                    <button 
-                        className="cancelButton"
-                        onClick={() => {}}
-                    >
-                        Cancelar
-                    </button>
+                    <Link to='/list'>
+                        <button 
+                            className="cancelButton"
+                        >
+                            Cancelar
+                        </button>
+                    </Link>
                 </div>        
 
                 <div className="inputSection">
@@ -74,12 +76,14 @@ export default function FormsTemplate(props: any) {
                         onChange={event => setNumber(event.target.value)}
                     />
 
-                    <button 
-                        className="addButton"
-                        onClick={() => ContactInput()}
-                    >
-                        Adicionar
-                    </button>
+                    <Link to='/list'>
+                        <button 
+                            className="addButton"
+                            onClick={() => ContactInput()}
+                        >
+                            Adicionar
+                        </button>
+                    </Link>
                 </div>
 
             </div>

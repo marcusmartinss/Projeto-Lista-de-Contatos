@@ -20,12 +20,11 @@ function AppendNewContacts() {
                     <td className="column">{element.Email}</td>
                     <td className="column">
                         <div className="icons">
-                            <FiEdit
-                                className="edit-icon"
-                                onClick={() => {
-                                    <Link to='/contacts'/>
-                                }}
-                            />
+                            <Link to='/edit'>
+                                <FiEdit
+                                    className="edit-icon"
+                                />
+                            </Link>
                             <FaRegTrashAlt className="delete-icon"/>
                         </div>
                     </td>
@@ -60,8 +59,4 @@ export function ContactsTable() {
             {TableConstruction()}
         </Fragment>
     );
-}
-
-function useHistory(): History {
-    throw new Error('Function not implemented.');
 }

@@ -6,7 +6,7 @@ import ContactsList from '../pages/ContactsList';
 import EditContact from '../pages/EditContact';
 import NewContact from '../pages/NewContact';
 
-export default class Render extends React.Component {
+export default class RenderRoute extends React.Component {
 
   rotas = (
     <Routes>

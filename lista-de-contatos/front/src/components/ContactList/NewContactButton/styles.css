@@ -4,22 +4,28 @@
     background: #DC3F3E;
     border-radius: 0.5rem;  
     border: none;
-
+    
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto; 
     
     justify-content: left;
-
+    
     cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #DC3F3E;
 }
 
 .new-contact-container:hover {
-    background: #e73f3e;
+    background: #E73F3E;
+    text-decoration: underline;
+    text-decoration-color: #E73F3E;
 }
 
 .new-contact-container:active {
     background: #CD3F3E;
+    text-decoration: underline;
+    text-decoration-color: #CD3F3E;
 }
 
 .plus-icon {
