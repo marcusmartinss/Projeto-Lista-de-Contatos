@@ -12,20 +12,19 @@ body {
     padding-bottom: 2.7rem;
 }
 
-.title, .exit {
+.main-title, .exit {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 50%;
+    color: #EEE6CE;
 }
 
-.title {
+.main-title {
     padding-left: 10%;
     float: left;
 }
-
-a { color: inherit }
 
 .exit {
     padding-right: 10%;

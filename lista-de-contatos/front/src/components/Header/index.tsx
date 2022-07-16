@@ -10,9 +10,11 @@ export function Header(props: any) {
         <Fragment>
             <div className="site-header">
                 <Link to={'/list'}>
-                    <span className="title">{title}</span>
+                    <span className="main-title">{title}</span>
                 </Link>
-                <span className="exit">{exit}</span>
+                <Link to='/'>
+                    <span className="exit">{exit}</span>
+                </Link>
             </div>
         </Fragment>
     );
