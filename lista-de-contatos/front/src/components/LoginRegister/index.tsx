@@ -1,13 +1,14 @@
 import React, { useState, Fragment } from "react";
+import { Link } from "react-router-dom";
 
-import "../styles.css";
+import "./styles.css";
 
-export default function Login(){
+export default function LoginRegister(props: any){
 
     const [email, setEmail] = useState<string | null>();
     const [senha, setSenha] = useState<string | null>();
 
-    function Entrar(){
+    function LogReg(){
         let obj = {
             "email": email,
             "senha": senha,
@@ -55,15 +56,16 @@ export default function Login(){
                 </div>
                 <div className="right">
                     <div className="card">
-                        <h1 className='title'>Login,</h1>
-                        <h3>Acesse sua agenda.</h3>
+                        <h1 className='logreg-title'>{props.title}</h1>
+                        <h3>{props.subtitle}</h3>
                         <div className="textfield">
                             <input type="text" name="email" placeholder="Usuário ou Email"></input>
                             <input type="password" name="senha" placeholder="Senha"></input>
                         </div>
-                        <button className="btn">Log in</button>
-                        <h4>Ainda não possui conta?</h4>
-                        <a href="#">Crie uma agora!</a>
+                        <Link to='/list'>
+                            <button className="btn" onClick={() => LogReg()}>{props.btn}</button>
+                        </Link>
+                        {props.alreadyHaveAccount}
                     </div>
                 </div>
             </div>
