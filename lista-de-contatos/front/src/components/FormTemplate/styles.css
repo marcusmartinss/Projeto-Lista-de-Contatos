@@ -56,7 +56,7 @@
     border-color: black;
 }
 
-.cancelButton {
+.cancelButton, .addButton {
     font-family: "Inter";
     font-weight: 700;
     font-size: 1.25rem;
@@ -64,20 +64,17 @@
     border: hidden;
     height: 48px;
     width: 285px;
-    background-color: black;
     color: white;
+
+    cursor: pointer;
+}
+
+.cancelButton {
+    background-color: black;
 }
 
 .addButton {
-    font-family: "Inter";
-    font-weight: 700;
-    font-size: 1.25rem;
-    border-radius: 8px;
-    border: hidden;
-    height: 48px;
-    width: 285px;
     background-color: #CD3F3E;
-    color: white;
 }
 
 .addButton:hover {

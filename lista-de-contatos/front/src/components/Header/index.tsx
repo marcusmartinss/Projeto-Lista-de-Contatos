@@ -1,26 +1,21 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import './styles.css'
 
-export function Header() {
+export function Header(props: any) {
     let title: string = 'Agenda';
     let exit: string = 'Sair';
 
-    let loggedIn: boolean = true;
-
-    if (loggedIn) {
-        return (
-            <Fragment>
-                <div className="site-header">
-                    <span className="title">{title}</span>
+    return (
+        <Fragment>
+            <div className="site-header">
+                <Link to={'/list'}>
+                    <span className="main-title">{title}</span>
+                </Link>
+                <Link to='/'>
                     <span className="exit">{exit}</span>
-                </div>
-            </Fragment>
-        );
-    } else {
-        return(
-            <Fragment>
-
-            </Fragment>
-        );
-    }
+                </Link>
+            </div>
+        </Fragment>
+    );
 }
