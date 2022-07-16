@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose")
 
 const Services = require("./services");
 
@@ -16,8 +15,13 @@ contatoRoute.post('/create', async (req, res) => {
 });
 
 contatoRoute.delete('/delete/:id', async (req, res) => {
-    const id = mongoose.Types.ObjectId(req.params.id.trim());
-    const delContato = await Models.contatoModel.findOne({_id: id});
+    const id = req.params.id;
+    const delContato = await Models.contatoModel.findOne({_id: id}).catch((err) => res.status(500));
+
+    if(!delContato){
+        res.status(424).json({message: "Usuário não encontrado"});
+        return;
+    }
 
     try {
         await Models.contatoModel.deleteOne({_id: id});
