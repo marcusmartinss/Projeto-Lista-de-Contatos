@@ -5,19 +5,14 @@ import './App.css';
 
 import InputContato from './pages/inputcontato';
 import { Contacts } from './components/ContactsList';
+import Login from './components/Entrada/Login';
+import Cadastro from './components/Entrada/Cadastro';
 
 const App = () => {
 
-  let tela: string = '';
-
   return (
     <Fragment>
-      <header>
-        <Header/>
-      </header>
-      <body>
-        { tela === '1' ? <Contacts/> : <InputContato/> }
-      </body>
+      <Cadastro/>
     </Fragment>
   );
 }
