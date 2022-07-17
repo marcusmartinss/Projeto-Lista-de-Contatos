@@ -57,6 +57,35 @@ contatoRoute.patch('/update/:id', async (req, res) => {
         res.status(500).json({error: err});
     }
 
+})
+
+// GET Lista de todos contatos
+contatoRoute.get('/contact', async (req, res) => {
+    try {
+        const contatos = await Models.contatoModel.find();
+        res.status(200).json(contatos);
+    } catch (err) {
+        res.status(500).json({error: err});
+    }
+});
+
+// GET Informações de contato único
+contatoRoute.get('/contact/:id', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        const contato = await Models.contatoModel.findOne({_id: id});
+
+        if(!contato){
+            res.status(404).json({message: "Contato não encontrado"});
+            return;
+        }
+
+        res.status(200).json(contato);
+    } catch (err) {
+        res.status(500).json({error: err});
+    }
+
 });
 
 module.exports = {contatoRoute};
