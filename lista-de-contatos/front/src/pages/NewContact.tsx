@@ -7,6 +7,7 @@ export default function NewContact() {
         <Fragment>
             <Header />
             <FormsTemplate
+                type={0}
                 registerTitle="Adicionar novo contato"
                 registerSubtitle="Preencha os dados abaixo."
                 name=""
