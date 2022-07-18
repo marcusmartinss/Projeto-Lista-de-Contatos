@@ -1,14 +1,19 @@
 import React, { Fragment } from 'react';
-import RenderRoute from './routes';
 
+import { Header } from './components/Header';
 import './App.css';
 
-export function App() {
+import InputContato from './pages/inputcontato';
+import { Contacts } from './components/ContactsList';
+import Login from './components/Entrada/Login';
+import Cadastro from './components/Entrada/Cadastro';
 
-  return(
-      <Fragment>
-        <RenderRoute />
-      </Fragment>
+const App = () => {
+
+  return (
+    <Fragment>
+      <Cadastro/>
+    </Fragment>
   );
 }
 
