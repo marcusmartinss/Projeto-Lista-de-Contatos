@@ -58,7 +58,7 @@ userRoute.delete('/:userId/delete/:id', async (req, res) => {
     }
 });
 
-userRoute.patch('/:id/update/:id', async (req, res) => {
+userRoute.patch('/:userId/update/:id', async (req, res) => {
     const id = req.params.id;
     const {nome, sobrenome, email, telefone} = req.body
 
@@ -95,7 +95,7 @@ userRoute.get('/:id/contact', async (req, res) => {
 });
 
 // GET Informações de contato único
-userRoute.get('/:id/contact/:id', async (req, res) => {
+userRoute.get('/:userId/contact/:id', async (req, res) => {
     const id = req.params.id;
 
     try {
