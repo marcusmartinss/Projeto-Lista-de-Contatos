@@ -81,7 +81,6 @@ userRoute.patch('/:userId/update/:id', async (req, res) => {
     } catch (err) {
         res.status(500).json({error: err});
     }
-
 })
 
 // GET Lista de todos contatos

@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 
 function connectToDatabase(){
-  const link = "mongodb+srv://arthurmds:teste@cluster0.menzghb.mongodb.net/?retryWrites=true&w=majority";
+  const link = process.env.DB_LINK;
   
   mongoose.connect(link).then(() => {
     console.log("Connected to database");

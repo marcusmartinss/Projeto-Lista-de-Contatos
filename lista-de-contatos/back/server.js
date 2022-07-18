@@ -9,7 +9,7 @@ DB.connectToDatabase();
 const appExp = express();
 appExp.use(express.json());
 appExp.use(cors())
-const port = 8000;
+const port = 8002;
 
 appExp.use(Routes.userRoute);
 
