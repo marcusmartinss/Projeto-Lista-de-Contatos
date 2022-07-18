@@ -5,8 +5,8 @@ import "./styles.css";
 
 export default function LoginRegister(props: any){
 
-    const [email, setEmail] = useState<string | null>();
-    const [senha, setSenha] = useState<string | null>();
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
 
     function LogReg(){
         let obj = {
@@ -59,8 +59,8 @@ export default function LoginRegister(props: any){
                         <h1 className='logreg-title'>{props.title}</h1>
                         <h3>{props.subtitle}</h3>
                         <div className="textfield">
-                            <input type="text" name="email" placeholder="Usuário ou Email"></input>
-                            <input type="password" name="senha" placeholder="Senha"></input>
+                            <input type="email" name="email" placeholder="Usuário ou Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                            <input type="password" name="senha" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)}></input>
                         </div>
                         <Link to='/list'>
                             <button className="btn" onClick={() => LogReg()}>{props.btn}</button>

@@ -1,23 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import api from "../../services/api";
 
 import "./styles.css";
 
 export default function FormsTemplate(props: any) {
 
-    const [name, setName] = useState<string | null>();
-    const [surname, setSurname] = useState<string | null>();
+    const [nome, setNome] = useState<string | null>();
+    const [sobrenome, setSobrenome] = useState<string | null>();
     const [email, setEmail] = useState<string | null>();
-    const [number, setNumber] = useState<string | null>();
+    const [telefone, setTelefone] = useState<string | null>();
 
-    function ContactInput(){
+    function handleInput(){
         let obj = {
-            "name": name,
-            "surname": surname,
+            "nome": nome,
+            "sobrenome": sobrenome,
             "email": email,
-            "number": number,
+            "telefone": telefone,
         };
-        console.log(obj)
+        
+        if (props.type === 1) {
+            api.patch(`/update/${props.id}`, obj)
+        } else {
+            api.post('/create', obj)
+        }
     }
 
     return (
@@ -39,7 +45,7 @@ export default function FormsTemplate(props: any) {
                         className="inputBox"
                         type="text"
                         defaultValue={props.nome}
-                        onChange={event => setName(event.target.value)}
+                        onChange={event => setNome(event.target.value)}
                     />
 
                     <span className="inputTitle">Email:</span>
@@ -65,7 +71,7 @@ export default function FormsTemplate(props: any) {
                         className="inputBox"
                         type="text"
                         defaultValue={props.sobrenome}
-                        onChange={event => setSurname(event.target.value)}
+                        onChange={event => setSobrenome(event.target.value)}
                     />
 
                     <span className="inputTitle">Telefone:</span>
@@ -73,13 +79,13 @@ export default function FormsTemplate(props: any) {
                         className="inputBox"
                         type="tel"
                         defaultValue={props.telefone}
-                        onChange={event => setNumber(event.target.value)}
+                        onChange={event => setTelefone(event.target.value)}
                     />
 
                     <Link to='/list'>
                         <button 
                             className="addButton"
-                            onClick={() => ContactInput()}
+                            onClick={handleInput}
                         >
                             Adicionar
                         </button>
